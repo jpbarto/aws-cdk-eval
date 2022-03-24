@@ -1,0 +1,20 @@
+{
+  "version": "16.0.0",
+  "files": {
+    "bbc69d8650f904dca02c017e7b14ded27a2b1a541bdb29ab449b40b17b2f3c44": {
+      "source": {
+        "path": "TestNetworkStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "867003831966-eu-west-3": {
+          "bucketName": "cdk-hnb659fds-assets-867003831966-eu-west-3",
+          "objectKey": "bbc69d8650f904dca02c017e7b14ded27a2b1a541bdb29ab449b40b17b2f3c44.json",
+          "region": "eu-west-3",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::867003831966:role/cdk-hnb659fds-file-publishing-role-867003831966-eu-west-3"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -1,0 +1,370 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "TestNetworkStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "TestNetworkStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "TestNetworkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://867003831966/eu-west-3",
+      "properties": {
+        "templateFile": "TestNetworkStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::867003831966:role/cdk-hnb659fds-deploy-role-867003831966-eu-west-3",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::867003831966:role/cdk-hnb659fds-cfn-exec-role-867003831966-eu-west-3",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-867003831966-eu-west-3/bbc69d8650f904dca02c017e7b14ded27a2b1a541bdb29ab449b40b17b2f3c44.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "TestNetworkStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::867003831966:role/cdk-hnb659fds-lookup-role-867003831966-eu-west-3",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "TestNetworkStack.assets"
+      ],
+      "metadata": {
+        "/TestNetworkStack/CDKVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPC30E5B98C"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet1Subnet7978332D"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet1RouteTable8A98AB8A"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet1RouteTableAssociation6C8EC479"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet1DefaultRouteEC7E5BCF"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet1EIPB85D56EF"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet1NATGateway2E3C0E06"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet2Subnet09B5539A"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet2RouteTableD19034EC"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet2RouteTableAssociation99B410EB"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet2DefaultRouteA466AE36"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet2EIPF78D7D73"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet2NATGateway341F7722"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet3Subnet27546F71"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet3RouteTable41EE26EF"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet3RouteTableAssociationBB9FCCC0"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet3DefaultRoute95B519F4"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet3/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet3EIPCA1826DE"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/publicSubnet3/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCpublicSubnet3NATGateway8E20CC8A"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet1Subnet88AB4139"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet1RouteTable12D017FF"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet1RouteTableAssociation818DAFD5"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet1DefaultRouteD2825AB3"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet2Subnet9008FF9F"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet2RouteTableC0A6C8AA"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet2RouteTableAssociation6D025033"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet2DefaultRoute3236F513"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet3Subnet0ACCE27B"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet3RouteTableF72E3EAB"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet3RouteTableAssociation4E0735C7"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/privateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCprivateSubnet3DefaultRoute26DA9E17"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/isolatedSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCisolatedSubnet1Subnet65B4CA60"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/isolatedSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCisolatedSubnet1RouteTable46B86C13"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/isolatedSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCisolatedSubnet1RouteTableAssociationBA29A5FA"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/isolatedSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCisolatedSubnet2Subnet87B867AF"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/isolatedSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCisolatedSubnet2RouteTable1F7B10AD"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/isolatedSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCisolatedSubnet2RouteTableAssociationF3DE116D"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/isolatedSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCisolatedSubnet3Subnet2813C780"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/isolatedSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCisolatedSubnet3RouteTableA2B7048C"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/isolatedSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCisolatedSubnet3RouteTableAssociation58ED4E23"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/endpointsSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCendpointsSubnet1Subnet5D59038A"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/endpointsSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCendpointsSubnet1RouteTable09621BA5"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/endpointsSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCendpointsSubnet1RouteTableAssociation4647637B"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/endpointsSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCendpointsSubnet2Subnet545136B5"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/endpointsSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCendpointsSubnet2RouteTable685443C0"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/endpointsSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCendpointsSubnet2RouteTableAssociation2A111C12"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/endpointsSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCendpointsSubnet3SubnetF0C6B2CE"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/endpointsSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCendpointsSubnet3RouteTable2C2D6F60"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/endpointsSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCendpointsSubnet3RouteTableAssociation5A42FE1A"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCIGW995482C6"
+          }
+        ],
+        "/TestNetworkStack/CDKVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKVPCVPCGWF37139E3"
+          }
+        ],
+        "/TestNetworkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/TestNetworkStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/TestNetworkStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "TestNetworkStack"
+    }
+  }
+}
