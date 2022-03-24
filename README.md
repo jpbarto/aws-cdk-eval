@@ -9,3 +9,4 @@ The following is based on https://docs.aws.amazon.com/cdk/v2/guide/hello_world.h
 cdk synth then generates the cloudformation and cdk deploy deploys it
 
 
+Next step is the python workshop at https://cdkworkshop.com/30-python.html
